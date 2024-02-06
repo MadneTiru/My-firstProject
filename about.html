@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Resume</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+        }
+     
+        /* back button  */
+        .btn{
+    display: inline;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    color: #081b29;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #081b29;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color:black;
+}
+
+/* p, ul, li {
+    color: #007bff;
+} */
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.main{
+    margin-left: 40px;
+    width: 90%;
+    height: 50%;
+}
+
+.main p {
+    position: relative;
+    color: #00abf0; /* Initial text color */
+    border: 2px solid #00abf0; /* Initial border color */
+    border-radius: 10px;
+    padding: 10px; /* Adjust padding as needed */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+.main p:hover {
+    color: #081b29; /* Text color on hover */
+    border-color: #00abf0; /* Border color on hover */
+    background-color: #00abf0;
+}
+
+.main a:hover {
+    color: red;
+    border-color: #00abf0; /* Border color on hover */
+    background-color: #00abf0;
+}
+
+.main p:hover::before {
+    width: 100%; /* Width of pseudo-element on hover */
+}
+.container h1{
+    width: 50%;
+    height: 50%;
+}
+
+.container h1 {
+    position: relative;
+    color: black; /* Initial text color */
+    border: 2px solid #00abf0; /* Initial border color */
+    border-radius: 10px;
+    background: #00abf0;
+    padding: 10px; /* Adjust padding as needed */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+.container h1:hover {
+    color: #00abf0; /* Text color on hover */
+    border-color: #00abf0; /* Border color on hover */
+    background-color: #081b29;
+}
+
+.container h1:hover::before {
+    width: 100%; /* Width of pseudo-element on hover */
+}
+.container h2{
+    width: 50%;
+    height: 50%;
+}
+
+.container h2 {
+    position: relative;
+    color: black; /* Initial text color */
+    border: 2px solid #00abf0; /* Initial border color */
+    border-radius: 10px;
+    background: #00abf0;
+    padding: 10px; /* Adjust padding as needed */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+.container h2:hover {
+    color: #00abf0; /* Text color on hover */
+    border-color: #00abf0; /* Border color on hover */
+    background-color: #081b29;
+}
+
+.container h2:hover::before {
+    width: 100%; /* Width of pseudo-element on hover */
+}
+
+.para{
+    margin-left: 40px;
+    width: 90%;
+    height: 50%;
+}
+
+.para p {
+    position: relative;
+    color: #00abf0; /* Initial text color */
+    border: 2px solid #00abf0; /* Initial border color */
+    border-radius: 10px;
+    padding: 10px; /* Adjust padding as needed */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+.para p:hover {
+    color: #081b29; /* Text color on hover */
+    border-color: #00abf0; /* Border color on hover */
+    background-color: #00abf0;
+}
+
+.para p:hover::before {
+    width: 100%; /* Width of pseudo-element on hover */
+}
+
+.table {
+    margin-left: 40px;
+    width: 90%;
+    height: 50%;
+}
+
+.table tr {
+    position: relative;
+    color: #00abf0; /* Initial text color */
+    border: 2px solid #00abf0; /* Initial border color */
+    border-radius: 10px;
+    padding: 10px; /* Adjust padding as needed */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+.table tr:hover {
+    color: #081b29; /* Text color on hover */
+    border-color: #00abf0; /* Border color on hover */
+    background-color: #00abf0;
+}
+.table tr:hover::before {
+    width: 100%; /* Width of pseudo-element on hover */
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Madne Tirupati Apparao</h1>
+        <div class="main">
+            <p><a href="#">tirumadne019@gmail.com </a><br>
+                At. Post. Kandhar, Nanded, Maharashtra - 431714.<br>
+                <a href="#">https://www.linkedin.com/in/tirupati-madne-729697227</a><br>
+                <a href="#">https://github.com/MadneTiru</a></p>
+        </div>
+        
+        
+        <h2>Professional Summary</h2>
+        <div class="main">
+            <p>I am an enthusiastic professional with a B.Sc and M.Sc in Computer Science. I bring a strong academic background and a commitment to excellence. Eager to contribute my knowledge and learn in a dynamic work environment. Seeking opportunities to apply my skills and grow within a forward-thinking organization.</p>
+        </div>
+       
+        
+        <h2>Educational Background</h2>
+        <table class="table">
+            <tr>
+                <th>2023</th>
+                <td>
+                    Master's In Computer Application <br>
+                    Swami Ramanand Teerth Marathwada University, Nanded <br>
+                    70.72%
+                </td>
+            </tr>
+            <tr>
+                <th>2021</th>
+                <td>
+                    Bachelor’s Science <br>
+                    Swami Ramanand Teerth Marathwada University, Nanded <br>
+                    67.45%
+                </td>
+            </tr>
+            <tr>
+                <th>2017</th>
+                <td>
+                    HSC <br>
+                    Shri Shivaji College, Kandhar <br>
+                    Maharashtra State Board <br>
+                    65.25%
+                </td>
+            </tr>
+            <tr>
+                <th>2015</th>
+                <td>
+                    Manovikas Vidhalaya, Kandhar <br>
+                    Maharashtra State Board <br>
+                    71.40%
+                </td>
+            </tr>
+          
+        </table>
+       
+        <h2>Certification Completed / Ongoing under FirstBit Solutions, Pune</h2>
+        <div class="main">
+            <p>1. Full Stack Java Developer - Will be completed in March 2024.</p>
+        </div>
+      
+        
+        <h2>Technical Skills</h2>
+        <table class="table">
+            <tr>
+                <th>Core Technologies:</th>
+                <td>C, C++, Java, Data Structures</td>
+            </tr>
+            <tr>
+                <th>Web Technologies:</th>
+                <td>HTML, CSS, JavaScript, jQuery, Bootstrap</td>
+            </tr>
+            <tr>
+                <th>Database:</th>
+                <td>MySQL/Oracle</td>
+            </tr>
+            <tr>
+                <th>Tools: </th>
+                <td>Eclipse, Visual Studio Code</td>
+            </tr>
+        </table>
+        <h2>Awards / Achievements / Extra Curricular Activities</h2>
+            <div class="main">
+                <p> Cricket Tournament - First Prize Winner</p>
+            </div>
+        <h2>Personal Information</h2>
+        <table class="table">
+            <tr>
+                <th>Gender :</th>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <th>Date Of Birth :</th>
+                <td>12th Dec, 1999</td>
+            </tr>
+            <tr>
+                <th>Hobbies :</th>
+                <td>Playing Cricket, Riding Bike</td>
+            </tr>
+            <tr>
+                <th>Languages Known :</th>
+                <td>Marthi, Hindi, English</td>
+            </tr>
+        </table>
+        <div class="btn">
+            <a href="index.html"><i class='bx bx-arrow-back'></i></i></a>
+        </div>
+    </div>
+</body>
+</html>
